@@ -1,29 +1,30 @@
 ---
 title: NSIndexSet
 author: Mattt
-translator: (Your Name Goes Here)
+translator: Juan F. Sagasti
 category: Cocoa
-excerpt: 
-    NSIndexSet (like its mutable counterpart, NSMutableIndexSet) 
-    is a sorted collection of unique unsigned integers. 
-    Think of it like an NSRange that supports non-contiguous series. 
-    It has wicked fast operations for finding indexes in ranges 
-    or set intersections, and comes with all of the convenience methods 
-    you'd expect in a Foundation collection class.
+excerpt:
+    NSIndexSet (igual que su contraparte mutable, NSMutableIndexSet)
+    es una colección ordenada de enteros únicos sin signo (`UInt`).
+    Piensa en ella como un `NSRange` que soporta series no-contiguas.
+    Sus operaciones para encontrar índices en rangos o realizar la
+    intersección de sets son tremendamente rápidas, e implementa 
+    todos los métodos de conveniencia que cabría esperar 
+    de una Foundation class. 
 status:
     swift: 2.0
     reviewed: September 8, 2015
 ---
 
-`NSIndexSet` (like its mutable counterpart, `NSMutableIndexSet`) is a sorted collection of unique unsigned integers. Think of it like an `NSRange` that supports non-contiguous series. It has wicked fast operations for finding indexes in ranges or set intersections, and comes with all of the convenience methods you'd expect in a Foundation collection class.
+`NSIndexSet` (igual que su contraparte mutable, NSMutableIndexSet) es una colección ordenada de enteros únicos sin signo (`UInt`). Piensa en ella como un `NSRange` que soporta series no-contiguas. Sus operaciones para encontrar índices en rangos o realizar la intersecciones entre sets son tremendamente rápidas, e implementa todos los métodos de conveniencia que cabría esperar de una clase Foundation. 
 
-You'll find `NSIndexSet` used throughout the Foundation framework. Anytime a method gets multiple elements from a sorted collection, such as an array or a table view's data source, you can be sure that an `NSIndexSet` parameter will be somewhere in the mix.
+`NSIndexSet` se usa ampliamente en el propio Foundation framework. Cada vez que un método obtiene elementos de una colección ordenada, como en el caso de un array o del data source de una tableView, se usará `NSIndexSet` en algún punto intermedio.
 
-If you look hard enough, you may start to find aspects of your data model that could be represented with `NSIndexSet`. For example, AFNetworking uses an index set to represent HTTP response status codes: the user defines a set of "acceptable" codes (in the `2XX` range, by default), and the response is checked by using `containsIndex:`.
+Es muy probable que encuentres ciertos aspectos de tu modelo que podrían representarse también con `NSIndexSet`. Por ejemplo, AFNetworking usa un `NSIndexSet` para representar los códigos de estado de una respuesta HTTP: el usuario define un set de códigos "aceptables" (en el rango 2XX, por defecto), y la respuesta se comprueba usando `containsIndex:`.
 
 ---
 
-The Swift standard library includes `PermutationGenerator`, an often-overlooked type that dovetails nicely with `NSIndexSet`. `PermutationGenerator` wraps a collection and a sequence of indexes (sound familiar?) to allow easy iteration:
+La librería estándar de Swift incluye `PermutationGenerator`, un tipo que a menudo se pasa por alto y que encaja muy bien con `NSIndexSet`. `PermutationGenerator` empaqueta una colección y una secuencia de índices (o index set, ¿te suena familiar?) para facilitar la iteración:
 
 ```swift
 let streetscape = ["Ashmead", "Belmont", "Clifton", "Douglas", "Euclid", "Fairmont",
@@ -40,11 +41,11 @@ for street in PermutationGenerator(elements: streetscape, indices: selectedIndic
 // Ashmead, Belmont, Clifton, Fairmont, Monroe, Newton, Otis
 ```
 
-Here are a few more ideas to get you thinking in terms of index sets:
+Aquí tienes algunas ideas para hacerte pensar en términos de index sets:
 
-- Have a list of user preferences, and want to store which ones are switched on or off? Use a single `NSIndexSet` in combination with an `enum` `typedef`.
-- Filtering a list of items by a set of composable conditions? Ditch the `NSPredicate`; instead, cache the indexes of objects that fulfill each condition, and then get the union or intersection of those indexes as conditions are added and removed.
+- ¿Tienes una lista de preferencias de usuario y quieres guardar cúales están activadas y cuáles no? Usa un `NSIndexSet` en combinación con un `enum` `typedef`.
+- ¿Quieres filtrar una lista de elementos por una serie de condiciones? Descarta `NSPredicate`; en su lugar cachea los índices de los objetos que satisfacen cada condición y haz la unión o intersección de esos índices a medida que se añaden o eliminan condiciones.
 
 ---
 
-Overall, `NSIndexSet` is a solid class. A fair bit nerdier than its collection class siblings, but it has its place. At the very least, it's a prime example of the great functionality that you find by paying attention to what Foundation uses in its own APIs.
+En general, `NSIndexSet` es una clase robusta. Quizá un poco más *nerd* que sus colecciones hermanas, pero tiene su lugar y, como mínimo, es un gran indicativo de la fantástica funcionalidad que puedes encontrar al poner un poco de atención en lo que Foundation usa en sus propias APIs. 
