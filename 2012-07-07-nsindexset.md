@@ -3,7 +3,7 @@ title: NSIndexSet
 author: Mattt
 translator: Juan F. Sagasti
 category: Cocoa
-excerpt:
+excerpt: >
     `IndexSet` (igual que su contraparte mutable, NSMutableIndexSet)
     es una colección ordenada de enteros únicos sin signo (`UInt`).
     Piensa en ella como un `NSRange` que soporta series no-contiguas.
