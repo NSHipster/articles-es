@@ -23,7 +23,7 @@ Y todo gracias a unas pocas características nuevas.
 Una política de contraseñas apropiada debe ser simple: requerir un número mínimo de caracteres (al menos 8) y permitir contraseñas largas (64 caracteres o más). Cualquier cosa adicional más elaborada, como preguntas de seguridad, tiempos de expiración periódicos o requisitos forzados de caracteres, no hacen más que incordiar a los usuarios que dichas políticas tratan de proteger.
 
 > No tomes mis palabras muy en serio, no soy ningún experto en seguridad.
-> En cambio, echa un vistazo a las [Digital Identity Guidelines](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf) del <acronym title="National Institute of Standards and Technology">NIST</acronym> (publicado en junio de 2017).
+> En cambio, echa un vistazo a las [Digital Identity Guidelines](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf) del <abbr title="National Institute of Standards and Technology">NIST</abbr> (publicado en junio de 2017).
 
 
 La buena noticia es que cada vez más empresas y organizaciones prestan atención a las buenas prácticas sobre seguridad. 
@@ -35,7 +35,7 @@ Y la terrible verdad es que muchos de los anti-patrones de seguridad existentes 
 El autocompletado de Safari (`AutoFill`) presente desde iOS 8 es capaz de generar contraseñas, pero uno de sus puntos débiles era que no aseguraba que una contraseña generada satisfaciera los requisitos de un servicio en particular. 
 Pero Apple apunta a solventar este problema con una característica nueva (`Atomatic Strong Passwords`) en Safari, iOS 12 y macOS Mojave.
 
-El ingeniero de WebKit Daniel Bates envió [esta propuesta](https://github.com/whatwg/html/issues/3518) al comité <acronym title="Web Hypertext Application Technology Working Group">WHATWG</acronym> el 1 de marzo. 
+El ingeniero de WebKit Daniel Bates envió [esta propuesta](https://github.com/whatwg/html/issues/3518) al comité <abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr> el 1 de marzo. 
 Y el 6 de junio, el equipo de WebKit [anunció el lanzamiento de Safari Technology Preview 58](https://webkit.org/blog/8327/safari-technology-preview-58-with-safari-12-features-is-now-available/), con soporte para la generación de contraseñas seguras que usen el atributo `passwordrules`. Este anuncio coincidió con el lanzamiento de los SDKs beta de iOS 12 en la WWDC, los cuales incluían una API nueva de `UITextInputPasswordRules` junto con otra serie de características nuevas para la gestión de contraseñas que incluían, por ejemplo, el autorrelleno de códigos de seguridad.
 
 
@@ -77,7 +77,7 @@ También puedes declarar una clase de caracteres personalizada especificando una
 
 La [herramienta de validación de contraseñas](https://developer.apple.com/password-rules/) de Apple te permite experimentar con diferentes reglas y obtener feedback en tiempo real de los resultados. ¡Puedes generar y descargar miles de contraseñas para desarrollo y testing!
 
-{% asset password-rules-validation-tool.png alt="Password Rules Validation Tool" %}
+{% asset password-rules-validation-tool.png alt="Herramienta de Validación de Contraseñas" %}
 
 Para más información sobre la sintaxis de las reglas, echa un vistazo a ["Customizing Password AutoFill Rules"](https://developer.apple.com/documentation/security/password_autofill/customizing_password_autofill_rules).
 
@@ -180,6 +180,8 @@ extension UITextInputPasswordRules {
     }
 }
 ```
+
+**BONUS!** He creado un paquete Swift con esta API llamado [PasswordRules](https://github.com/NSHipster/PasswordRules).
 
 ---
 
