@@ -30,7 +30,7 @@ La buena noticia es que cada vez más empresas y organizaciones prestan atenció
 La mala noticia es que requirió una serie de brechas de seguridad que afectaron a millones de personas antes de que empezaran a cambiar las cosas.
 Y la terrible verdad es que muchos de los anti-patrones de seguridad existentes no se corregirán pronto debido a la lentitud que tienen los gobiernos y las corporaciones en hacer las cosas.
 
-## Contraseñas Seguras Automáticas
+## Contraseñas seguras automáticas
 
 El autocompletado de Safari (`AutoFill`) presente desde iOS 8 es capaz de generar contraseñas, pero uno de sus puntos débiles era que no aseguraba que una contraseña generada satisfaciera los requisitos de un servicio en particular. 
 Pero Apple apunta a solventar este problema con una característica nueva (`Atomatic Strong Passwords`) en Safari, iOS 12 y macOS Mojave.
@@ -39,7 +39,7 @@ El ingeniero de WebKit Daniel Bates envió [esta propuesta](https://github.com/w
 Y el 6 de junio, el equipo de WebKit [anunció el lanzamiento de Safari Technology Preview 58](https://webkit.org/blog/8327/safari-technology-preview-58-with-safari-12-features-is-now-available/), con soporte para la generación de contraseñas seguras que usen el atributo `passwordrules`. Este anuncio coincidió con el lanzamiento de los SDKs beta de iOS 12 en la WWDC, los cuales incluían una API nueva de `UITextInputPasswordRules` junto con otra serie de características nuevas para la gestión de contraseñas que incluían, por ejemplo, el autorrelleno de códigos de seguridad.
 
 
-## Requisitos de Contraseñas
+## Requisitos de contraseñas
 
 Los requisitos de contraseñas son como una receta para los generadores de contraseñas. Siguiendo una serie de reglas simples, el generador puede crear aleatoriamente contraseñas seguras que satisfacen una serie de requisitos especificados por el proveedor del servicio.
 
@@ -61,7 +61,7 @@ Las claves `max-consecutive`, `minlength`, and `maxlength` tienen un entero no n
 Las claves `required` y `allowed` tienen una de las siguientes clases como valor:
 
 
-### Clases de Caracteres
+### Clases de caracteres
 
 - `upper` (`A-Z`)
 - `lower` (`a-z`)
@@ -83,7 +83,7 @@ Para más información sobre la sintaxis de las reglas, echa un vistazo a ["Cust
 
 ---
 
-## Definiendo Reglas de Contraseña
+## Definiendo reglas de contraseña
 
 En iOS, inicializa la propiedad `passwordRules` de un `UITextField` con un objeto de tipo `UITextInputPasswordRules` (inicializa también `textContentType` al valor  `.newPassword` ):
 
@@ -102,7 +102,7 @@ En web, inicializa el atributo `passwordrules` a un elemento `<input>` con `type
 > Si no se especifica, se aplica la regla `allowed: ascii-printable` por defecto.
 > Aunque si tu formulario tiene un campo de confirmación de contraseña se aplicarán automáticamente las reglas del campo precedente.
 
-## Generando Reglas de Contraseña en Swift
+## Generando reglas de contraseña en Swift
 
 Si la idea de trabajar con un formato basado en ristras sin una abstracción adecuada te revuelve las tripas tranquilo, no estás solo. Aquí tienes una forma de encapsular las reglas en una API de Swift:
 
