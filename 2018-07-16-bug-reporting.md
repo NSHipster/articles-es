@@ -4,7 +4,7 @@ author: Mattt
 translator: Juan F. Sagasti
 category: ""
 excerpt:
-	Si alguna vez te han dicho «reporta un Radar» (en inglés _"file a Radar"_) y te has preguntado qué significa eso, este artículo va sobre ello.
+    Si alguna vez te han dicho «reporta un Radar» (en inglés _"file a Radar"_) y te has preguntado qué significa eso, este artículo va sobre ello.
 hiddenlang: ""
 status:
     swift: --
