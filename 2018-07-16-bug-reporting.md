@@ -77,12 +77,12 @@ El principal problema de Radar como desarrollador externo es la falta de transpa
 Esto se manifiesta claramente a la hora de saber lo que otros han reportado; no hay manera.
 Ocurre muy a menudo que inviertes una gran cantidad de tiempo escribiendo un resumen detallado y creando un caso de prueba reproducible solo para que, sin mayor dilación, el reporte sea cerrado y marcado como duplicado.
 
-[OpenRadar](https://openradar.appspot.com), creado por [Tim Burks](https://github.com/timburks), es una base de datos pública de errores reportados a Apple. </br>
+[Open Radar](https://openradar.appspot.com), creado por [Tim Burks](https://github.com/timburks), es una base de datos pública de errores reportados a Apple. </br>
 A lo largo de sus muchos años de existencia, se ha acabado convirtiendo en la forma _de facto_ para coordinar nuestros reportes.
 
 {% asset open-radar.png %}
 
-Cuando envías un Radar a Apple, lo ideal es que también [lo hagas con OpenRadar](https://openradar.appspot.com/myradars/add) (a menos que sea algo que no deba ser revelado públicamente). Tu contribución ayudará a otros que puedan encontrarse el mismo problema en el futuro.
+Cuando envías un Radar a Apple, lo ideal es que también [lo hagas con Open Radar](https://openradar.appspot.com/myradars/add) (a menos que sea algo que no deba ser revelado públicamente). Tu contribución ayudará a otros que puedan encontrarse el mismo problema en el futuro.
 
 ### Brisk
 
@@ -133,7 +133,7 @@ Es un asco. Lo entendemos.
 
 Sin embargo, nada de eso arreglará antes el problema. Como mucho, esa hostilidad podría hacer que el ingeniero sienta menos predisposición a la hora a abordar el tema.
 
-Recuerda que hay una persona al otro lado de tu reporte. Practica la [empatía](https://nshipster.com/empathy/).
+Recuerda que hay una persona al otro lado de tu reporte. Practica la [empatía](https://nshipster.es/empathy/).
 
 > Peter Steinberger tiene más consejos sobre escribir buenos reportes de error
 > [en este artículo](https://pspdfkit.com/blog/2016/writing-good-bug-reports/) (en inglés).
