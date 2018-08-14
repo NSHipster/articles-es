@@ -30,7 +30,7 @@ Cuando se crea un Radar, se le asigna un ID único y permanente. Estos IDs son e
 (En el momento en el que escribí este artículo, los Radars nuevos tienen IDs de 8 dígitos que empiezan por el 4.)
 
 > Radar.app usa el esquema de URL personalizado `rdar://`  <br/>
-> Si un empleado de Apple hace click sobre un enlace [rdar://xxxxxxxx](rdar://30000000) con un ID, le llevará directamente a dicho Radar. </br>
+> Si un empleado de Apple hace click sobre un enlace [rdar://xxxxxxxx](rdar://30000000) con un ID, le llevará directamente a dicho Radar. <br/>
 > En cambio, si hacemos click en este enlace se abrirá un diálogo con el mensaje «No hay ninguna aplicación definida para abrir la URL rdar://30000000.»
 
 
@@ -73,11 +73,11 @@ Aquí tienes algunas herramientas esenciales de la comunidad de desarrollo de Ap
 
 ### Open Radar
 
-El principal problema de Radar como desarrollador externo es la falta de transparencia. </br>
+El principal problema de Radar como desarrollador externo es la falta de transparencia. <br/>
 Esto se manifiesta claramente a la hora de saber lo que otros han reportado; no hay manera.
 Ocurre muy a menudo que inviertes una gran cantidad de tiempo escribiendo un resumen detallado y creando un caso de prueba reproducible solo para que, sin mayor dilación, el reporte sea cerrado y marcado como duplicado.
 
-[Open Radar](https://openradar.appspot.com), creado por [Tim Burks](https://github.com/timburks), es una base de datos pública de errores reportados a Apple. </br>
+[Open Radar](https://openradar.appspot.com), creado por [Tim Burks](https://github.com/timburks), es una base de datos pública de errores reportados a Apple. <br/>
 A lo largo de sus muchos años de existencia, se ha acabado convirtiendo en la forma _de facto_ para coordinar nuestros reportes.
 
 {% asset open-radar.png %}
@@ -89,10 +89,10 @@ Cuando envías un Radar a Apple, lo ideal es que también [lo hagas con Open Rad
 Aunque la nueva versión de Bug Reporter es bastante agradable de usar, no hay nada como una app nativa.
 
 [Brisk](https://github.com/br1sk/brisk/),
-creada por [Keith Smiley](https://github.com/keith), es una app macOS para enviar Radars a través del Bug Reporter de Apple.</br>
+creada por [Keith Smiley](https://github.com/keith), es una app macOS para enviar Radars a través del Bug Reporter de Apple.
 
 Es una app muy completa, con soporte para autenticación de dos factores,
-guardado de borradores, duplicado automático de Radars por ID e incluso soporte para abrir URLs de tipo `rdar://`.</br>
+guardado de borradores, duplicado automático de Radars por ID e incluso soporte para abrir URLs de tipo `rdar://`. <br/>
 Pero su característica estrella es la capacidad de publicar el reporte también en Open Radar.
 
 {% asset brisk-app.png %}
@@ -125,9 +125,9 @@ Un reporte tiene que hallar su camino hasta un ingeniero antes de que empiece a 
 
 Lo más probable es que no estés en tu mejor momento cuando escribas un reporte de error.
 
-Es inaceptable que no funcione como se espera. </br>
-Perdiste horas intentando depurar el problema. </br>
-Apple ya no se preocupa por la calidad del software. </br>
+Es inaceptable que no funcione como se espera. <br/>
+Perdiste horas intentando depurar el problema. <br/>
+Apple ya no se preocupa por la calidad del software. <br/>
 
 Es un asco. Lo entendemos.
 
@@ -177,5 +177,5 @@ Por suerte, las cosas han mejorado. El nuevo Bug Reporter es excelente y el proc
 > <cite>Dave DeLong ([@davedelong](https://twitter.com/davedelong))
 > [via Twitter](https://twitter.com/davedelong/status/1017853619717079040)</cite>
 
-La única forma de seguir mejorando es comunicándonos. </br>
+La única forma de seguir mejorando es comunicándonos. <br/>
 Así que recuerda, la próxima vez que encuentres algo extraño, _reporta un Radar_.
