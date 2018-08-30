@@ -2,12 +2,15 @@
 title: Reportes de error
 author: Mattt
 translator: Juan F. Sagasti
-category: ""
-excerpt:
-    Si alguna vez te han dicho «reporta un Radar» (en inglés _"file a Radar"_) y te has preguntado qué significa eso, este artículo va sobre ello.
+category: Miscellanea
+excerpt: >-
+  Si alguna vez te han dicho «reporta un Radar» 
+  (en inglés _"file a Radar"_) 
+  y te has preguntado qué significa eso, 
+  este artículo va sobre ello.
 hiddenlang: ""
 status:
-    swift: --
+  swift: --
 ---
 
 «Reporta un _Radar_.» 
