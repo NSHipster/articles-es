@@ -10,7 +10,7 @@ status:
   swift: 4.2
 ---
 
-En la década de 1930, Rube Goldberg ya era un nombre familiar, sinónimo de invenciones increíblemente complejas y retorcidas representadas en forma de tiras cómicas, como la de ["La servilleta automática."](https://upload.wikimedia.org/wikipedia/commons/a/a9/Rube_Goldberg%27s_%22Self-Operating_Napkin%22_%28cropped%29.gif) </br>
+En la década de 1930, Rube Goldberg ya era un nombre familiar, sinónimo de invenciones increíblemente complejas y retorcidas representadas en forma de tiras cómicas, como la de ["La servilleta automática."](https://upload.wikimedia.org/wikipedia/commons/a/a9/Rube_Goldberg%27s_%22Self-Operating_Napkin%22_%28cropped%29.gif) <br/>
 Por aquel entonces, Albert Einstein popularizó la frase «acción espeluznante a distancia» en su [crítica](https://es.wikipedia.org/wiki/Paradoja_EPR) hacia la interpretación de la mecánica cuántica de Niels Bohr, predominante por aquel entonces.
 
 Casi un siglo después, el desarrollo de software se ha convertido en lo que podría considerarse la quintaesencia de un artilugio de Goldberg, extendiéndose incluso por ese reino espeluznante gracias a la computación cuántica. 
@@ -218,5 +218,5 @@ Podrías incluso implementar un comportamiento en cascada a través de múltiple
 
 Como regla general, los efectos secundarios son algo a evitar en la programación debido a que dificulta la compresión de comportamiento complejo. Tenlo en mente la próxima vez que vayas a utilizar esta nueva herramienta.
 
-Sin embargo, desde la punta afilada de esta tambaleante torre de abstracción que es la programación, puede ser tentador (y quizá, a veces, gratificante), abrazar el caos del sistema. </br>
+Sin embargo, desde la punta afilada de esta tambaleante torre de abstracción que es la programación, puede ser tentador (y quizá, a veces, gratificante), abrazar el caos del sistema. <br/>
 Seguir siempre las reglas es _a**Bohr**rido_.
