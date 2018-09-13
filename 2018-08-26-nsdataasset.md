@@ -4,12 +4,7 @@ author: Mattt
 translator: Juan F. Sagasti
 category: Cocoa
 excerpt: >
-  Existen varias maneras de acelerar una petición de red: <br/>
-  comprimiendo y haciendo _streaming_, <br/>
-  cacheando y precargando; <br/>
-  reduciendo y alineando; <br/>
-  haciendo pooling y multiplexando la conexión; <br/>
-  postponiendo y lanzando en segundo plano. <br/>
+  Existen varias maneras de acelerar una petición de red: comprimiendo y haciendo _streaming_; cacheando y precargando; reduciendo y alineando; haciendo pooling y multiplexando la conexión; postponiendo y lanzando en segundo plano.
   
   Pero existe una estrategia de optimización muy superior a todas ellas: _no  hacer ninguna petición_.
   
@@ -24,7 +19,7 @@ Estudios recientes sobre experiencia de usuario indican que *cualquier* latencia
 Para grandes empresas de internet como Google, Amazon y Netflix, un segundo extra aquí y allá puede suponer una pérdida de miles de millones de beneficio anual. Por ello, no es de extrañar que dichas empresas dediquen tanto esfuerzo de ingeniería en hacer que la web sea rápida.
 
 Existen varias maneras de acelerar una petición de red: <br/>
-comprimiendo y haciendo _streaming_, <br/>
+comprimiendo y haciendo _streaming_; <br/>
 cacheando y precargando; <br/>
 reduciendo y alineando; <br/>
 haciendo pooling y multiplexando la conexión; <br/>
@@ -32,7 +27,7 @@ postponiendo y lanzando en segundo plano. <br/>
   
 Pero existe una estrategia de optimización muy superior a todas ellas: _no  hacer ninguna petición_.
 
-A este respecto, las apps tienen ventaja en comparación a las webs convencionales gracias a que se descargan de antemano. <br/>
+A este respecto, las apps tienen ventaja en comparación a las webs convencionales gracias a que se descargan de antemano.
 
 Esta semana en NSHipster, veremos cómo aprovechar el _Asset Catalog_ de una manera poco convencional para mejorar la experiencia de carga de tu app.
 
@@ -48,7 +43,7 @@ Las imágenes son, de lejos, el recurso más común, pero a partir de iOS 9 y ma
 
 Imaginemos una app para crear paletas digitales de colores.
 
-Para distinguir entre diferentes tonos de gris, podríamos cargar una lista de colores y sus respectivos nombres. Podríamos considerar descargar esto de un servidor durante el arranque de la app, pero eso podría causar una experiencia de usuario mala si [condiciones de red adversas](https://nshipster.com/network-link-conditioner/) bloquean cierta funcionalidad de la aplicación. <br/>
+Para distinguir entre diferentes tonos de gris, podríamos cargar una lista de colores y sus respectivos nombres. Podríamos considerar descargar esto de un servidor durante el arranque de la app, pero eso podría causar una experiencia de usuario mala si [condiciones de red adversas](https://nshipster.com/network-link-conditioner/) bloquean cierta funcionalidad de la aplicación.
 
 Como esta lista es un conjunto de datos relativamente estático, ¿por qué no incluirlos en el propio bundle en la forma de Asset Catalog?
 
@@ -146,7 +141,7 @@ Guardar y recuperar datos del Asset Catalog es trivial. Lo que es complejo, y mu
 
 Puedes mantener los datos actualizados usando`curl`, `rsync`, `sftp`, Dropbox, BitTorrent o Filecoin; ejecutando tareas desde un script de consola (ejecútalo desde una Build Phase de Xcode si lo prefieres); haciendo que sea parte de tu `Makefile`, `Rakefile`, `Fastfile` o lo que requiera el sistema de builds de tu elección; delegando la tarea a Jenkins, Travis o al becario con pinta de aburrido; usando alguna integración de Slack o creando un atajo de Siri con el que asombrar a tus compañeros diciendo _"Oye Siri, actualiza los datos antes de que caduquen"_
 
-**Sea como sea que decidas mantener los datos actualizados, asegúrate de que sea algo automatizado y parte del proceso de _release_.
+**Sea como sea que decidas mantener los datos actualizados, asegúrate de que sea algo automatizado y parte del proceso de _release_.**
 
 Aquí tienes un ejemplo de un script de consola que podrías ejecutar para descargar datos usando `curl`:
 
