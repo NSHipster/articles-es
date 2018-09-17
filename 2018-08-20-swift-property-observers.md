@@ -1,5 +1,5 @@
 ---
-title: Observadores de propiedades en Swift
+title: Observadores de propiedad de Swift
 author: Mattt
 translator: Juan F. Sagasti
 category: Swift
@@ -10,14 +10,14 @@ status:
   swift: 4.2
 ---
 
-En la década de 1930, Rube Goldberg ya era un nombre familiar, sinónimo de invenciones increíblemente complejas y retorcidas representadas en forma de tiras cómicas, como la de ["La servilleta automática."](https://upload.wikimedia.org/wikipedia/commons/a/a9/Rube_Goldberg%27s_%22Self-Operating_Napkin%22_%28cropped%29.gif) <br/>
+En la década de 1930, Rube Goldberg ya era un nombre familiar; sinónimo de invenciones increíblemente complejas y retorcidas representadas en forma de tiras cómicas, como la de ["La servilleta automática"](https://upload.wikimedia.org/wikipedia/commons/a/a9/Rube_Goldberg%27s_%22Self-Operating_Napkin%22_%28cropped%29.gif). <br/>
 Por aquel entonces, Albert Einstein popularizó la frase «acción espeluznante a distancia» en su [crítica](https://es.wikipedia.org/wiki/Paradoja_EPR) hacia la interpretación de la mecánica cuántica de Niels Bohr, predominante por aquel entonces.
 
 Casi un siglo después, el desarrollo de software se ha convertido en lo que podría considerarse la quintaesencia de un artilugio de Goldberg, extendiéndose incluso por ese reino espeluznante gracias a la computación cuántica. 
 
 Como desarrolladores de software, se nos alienta a reducir esas _acciónes a distancia_ en nuestro código cuanto sea posible. Esto puede observarse en patrones con nombres contundentes, como el [Principio de responsabilidad única](https://es.wikipedia.org/wiki/Principio_de_responsabilidad_única), el [Principio de la mínima sorpresa](https://es.wikipedia.org/wiki/Principio_de_la_M%C3%ADnima_Sorpresa) y la [Ley de Demeter](https://es.wikipedia.org/wiki/Ley_de_Demeter). Y a pesar de las dudas que puedan despertar estos principios acerca de los efectos secundarios, aún hay cabida, en ocasiones, para que tales efectos ayuden a aclarar, más que a confundir.
 
-El artículo de esta semana se centra en los observadores de propiedades en Swift, los cuales ofrecen, de manera nativa, una alternativa ligera a soluciones más formales como programación funcional reactiva (FRP) con model-view-viewmodel (MVVM).
+El artículo de esta semana se centra en los observadores de propiedad de Swift, los cuales ofrecen, de manera nativa, una alternativa ligera a soluciones más formales como programación funcional reactiva (FRP) con model-view-viewmodel (MVVM).
 
 ---
 
@@ -173,7 +173,7 @@ viene buscando pelea, ¡podemos darle su merecido!
 
 (Es decir, comunicarle errores de una forma razonable en lugar de fallar de manera silenciosa o permitir información inválida)
 
-## Propagando estado dependientes 
+## Propagando estado dependiente 
 
 Otro uso potencial de los observadores es propagar estado a componentes dependientes en un view controller.
 
