@@ -29,11 +29,10 @@ Radar es el sistema de seguimiento de errores de Apple. Cualquier empleado allí
 
 Radar se usa para el seguimiento de *features* y *bugs* por igual en software, hardware y prácticamente todo lo demás: documentación, localización, propiedades web e incluso las respuestas que obtienes de Siri. Pero más que la propia aplicación o la mismísima base de datos, Radar es un flujo de trabajo que guía la resolución de problemas desde su reporte hasta su verificación. 
 
-Cuando se crea un Radar, se le asigna un ID único y permanente. Estos IDs son enteros autoincrementales, de forma que te puedes hacer una idea de cuándo fue creado el reporte con solo ver el número. <br/>
-(En el momento en el que escribí este artículo, los Radars nuevos tienen IDs de 8 dígitos que empiezan por el 4.)
+Cuando se crea un Radar, se le asigna un ID único y permanente. Estos IDs son enteros autoincrementales, de forma que te puedes hacer una idea de cuándo fue creado el reporte con solo ver el número. En el momento en el que escribí este artículo, los Radars nuevos tienen IDs de 8 dígitos que empiezan por el 4.
 
-> Radar.app usa el esquema de URL personalizado `rdar://`  <br/>
-> Si un empleado de Apple hace click sobre un enlace [rdar://xxxxxxxx](rdar://30000000) con un ID, le llevará directamente a dicho Radar. <br/>
+> Radar.app usa el esquema de URL personalizado `rdar://`.
+> Si un empleado de Apple hace click sobre un enlace [rdar://xxxxxxxx](rdar://30000000) con un ID, le llevará directamente a dicho Radar.
 > En cambio, si hacemos click en este enlace se abrirá un diálogo con el mensaje «No hay ninguna aplicación definida para abrir la URL rdar://30000000.»
 
 
@@ -43,13 +42,13 @@ Desafortunadamente para todos los que no trabajamos en Apple, no podemos acceder
 
 ### Apple Bug Reporter
 
-[Apple Bug Reporter](https://bugreport.apple.com) es la interfaz primaria de Radar para desarrolladores externos. <br/>
+[Apple Bug Reporter](https://bugreport.apple.com) es la interfaz primaria de Radar para desarrolladores externos.
 
 El Bug Reporter fue actualizado recientemente a una web app moderna que recuerda a Mail y a las apps de [iCloud.com](https://icloud.com). Aquellos que recuerden su predecesor estarán de acuerdo en que ha sido una mejora enorme.
 
 {% asset apple-bug-reporter.png %}
 
-Elige el producto relacionado con el problema que estás reportando e introduce un título descriptivo. <br/>
+Elige el producto relacionado con el problema que estás reportando e introduce un título descriptivo. 
 Si es un error, especifica el tipo (Rendimiento, Crash/Bloqueo/Pérdida de datos, UI/Usabilidad, etc.) y la frecuencia con la que puedes reproducirlo. 
 
 Para terminar, redacta la descripción del problema incluyendo un resumen, pasos para reproducirlo, resultado esperado vs. resultado obtenido y la información de configuración y versión de tu sistema.
@@ -76,11 +75,11 @@ Aquí tienes algunas herramientas esenciales de la comunidad de desarrollo de Ap
 
 ### Open Radar
 
-El principal problema de Radar como desarrollador externo es la falta de transparencia. <br/>
+El principal problema de Radar como desarrollador externo es la falta de transparencia.
 Esto se manifiesta claramente a la hora de saber lo que otros han reportado; no hay manera.
 Ocurre muy a menudo que inviertes una gran cantidad de tiempo escribiendo un resumen detallado y creando un caso de prueba reproducible solo para que, sin mayor dilación, el reporte sea cerrado y marcado como duplicado.
 
-[Open Radar](https://openradar.appspot.com), creado por [Tim Burks](https://github.com/timburks), es una base de datos pública de errores reportados a Apple. <br/>
+[Open Radar](https://openradar.appspot.com), creado por [Tim Burks](https://github.com/timburks), es una base de datos pública de errores reportados a Apple. 
 A lo largo de sus muchos años de existencia, se ha acabado convirtiendo en la forma _de facto_ para coordinar nuestros reportes.
 
 {% asset open-radar.png %}
@@ -95,7 +94,7 @@ Aunque la nueva versión de Bug Reporter es bastante agradable de usar, no hay n
 creada por [Keith Smiley](https://github.com/keith), es una app macOS para enviar Radars a través del Bug Reporter de Apple.
 
 Es una app muy completa, con soporte para autenticación de dos factores,
-guardado de borradores, duplicado automático de Radars por ID e incluso soporte para abrir URLs de tipo `rdar://`. <br/>
+guardado de borradores, duplicado automático de Radars por ID e incluso soporte para abrir URLs de tipo `rdar://`. 
 Pero su característica estrella es la capacidad de publicar el reporte también en Open Radar.
 
 {% asset brisk-app.png %}
@@ -180,5 +179,5 @@ Por suerte, las cosas han mejorado. El nuevo Bug Reporter es excelente y el proc
 > <cite>Dave DeLong ([@davedelong](https://twitter.com/davedelong))
 > [via Twitter](https://twitter.com/davedelong/status/1017853619717079040)</cite>
 
-La única forma de seguir mejorando es comunicándonos. <br/>
+La única forma de seguir mejorando es comunicándonos.
 Así que recuerda, la próxima vez que encuentres algo extraño, _reporta un Radar_.
