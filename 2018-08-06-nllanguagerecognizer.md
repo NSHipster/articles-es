@@ -27,8 +27,8 @@ El _Machine learning_ (Aprendizaje Automático) ha sido el núcleo del procesami
 El [framework de Lenguaje Natural](https://developer.apple.com/documentation/naturallanguage), nuevo en iOS 12 y macOS 10.14, refina APIs lingüísticas existentes y expone nueva funcionalidad a los desarrolladores.
 
 [`NLTagger`](https://developer.apple.com/documentation/naturallanguage/nltagger)
-es un [`NSLinguisticTagger`](https://nshipster.com/nslinguistictagger/) renovado. <br/>
-[`NLTokenizer`](https://developer.apple.com/documentation/naturallanguage/nltokenizer) es un reemplazo de [`enumerateSubstrings(in:options:using:)`](https://developer.apple.com/documentation/foundation/nsstring/1416774-enumeratesubstrings) (originalmente [`CFStringTokenizer`](https://developer.apple.com/documentation/corefoundation/cfstringtokenizer-rf8)). <br/>
+es un [`NSLinguisticTagger`](https://nshipster.com/nslinguistictagger/) renovado.
+[`NLTokenizer`](https://developer.apple.com/documentation/naturallanguage/nltokenizer) es un reemplazo de [`enumerateSubstrings(in:options:using:)`](https://developer.apple.com/documentation/foundation/nsstring/1416774-enumeratesubstrings) (originalmente [`CFStringTokenizer`](https://developer.apple.com/documentation/corefoundation/cfstringtokenizer-rf8)).
 [`NLLanguageRecognizer`](https://developer.apple.com/documentation/naturallanguage/nllanguagerecognizer) extiende la funcionalidad comentada en  `NSLinguisticTagger` a través de `dominantLanguage`, brindándonos pistas y predicciones acerca del texto analizado. 
 
 ## Reconociendo el idioma de un texto
@@ -47,7 +47,7 @@ recognizer.processString(string)
 recognizer.dominantLanguage // ja
 ```
 
-Crea una instancia de `NLLanguageRecognizer` y llama al método  `processString(_:)` pasándole una ristra. A partir de la propiedad `dominantLanguage` se accede a un objeto de tipo `NLLanguage` que contiene el tag BCP-47 del idioma predicho. <br/>
+Crea una instancia de `NLLanguageRecognizer` y llama al método  `processString(_:)` pasándole una ristra. A partir de la propiedad `dominantLanguage` se accede a un objeto de tipo `NLLanguage` que contiene el tag BCP-47 del idioma predicho.
 En este caso, `"ja"`, del japonés (日本語).
 
 ### Obteniendo hipótesis de varios idiomas
@@ -108,8 +108,6 @@ languageRecognizer.languageHints = [.danish: 0.25, .norwegian: 0.75]
 | ----------------------- | ----------------------- |
 | Danish (`da`)           | 30%                     |
 | Noruego Bokmål (`nb`)   | 70%                     |
-
-<br/>
 
 ¿Y qué podemos hacer una vez sabemos el idioma de una ristra?
 

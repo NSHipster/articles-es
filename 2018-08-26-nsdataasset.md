@@ -18,12 +18,7 @@ Estudios recientes sobre experiencia de usuario indican que *cualquier* latencia
 
 Para grandes empresas de internet como Google, Amazon y Netflix, un segundo extra aquí y allá puede suponer una pérdida de miles de millones de beneficio anual. Por ello, no es de extrañar que dichas empresas dediquen tanto esfuerzo de ingeniería en hacer que la web sea rápida.
 
-Existen varias maneras de acelerar una petición de red: <br/>
-comprimiendo y haciendo _streaming_; <br/>
-cacheando y precargando; <br/>
-reduciendo y alineando; <br/>
-haciendo pooling y multiplexando la conexión; <br/>
-postponiendo y lanzando en segundo plano. <br/>
+  Existen varias maneras de acelerar una petición de red: comprimiendo y haciendo _streaming_; cacheando y precargando; reduciendo y alineando; haciendo pooling y multiplexando la conexión; postponiendo y lanzando en segundo plano.
   
 Pero existe una estrategia de optimización muy superior a todas ellas: _no  hacer ninguna petición_.
 
