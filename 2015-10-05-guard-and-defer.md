@@ -419,7 +419,7 @@ nos llevará a una ejecución torcida y enredada.
 
 ---
 
-"Como programadores y programadoras sabios/as consciente de nuestra limitaciones,"
+"Como programadores y programadoras sabios/as conscientes de nuestra limitaciones,"
 debemos balancear el beneficio de cada funcionalidad de un lenguaje contra su costo.
 
 Una nueva instrucción como `guard` nos lleva un programa más lineal y legible;
