@@ -313,19 +313,19 @@ al correr el siguiente código, se imprime el resultado mostrado abajo:
 
 ```swift
 func procrastinate() {
-    defer { print("wash the dishes") }
-    defer { print("take out the recycling") }
-    defer { print("clean the refrigerator") }
+    defer { print("lavar los platos") }
+    defer { print("sacar el reciclaje") }
+    defer { print("limpiar el refrigerador") }
 
-    print("play videogames")
+    print("jugar videojuegos")
 }
 ```
 
 <samp>
-play videogames<br/>
-clean the refrigerator<br/>
-take out the recycling<br/>
-wash the dishes<br/>
+jugar videojuegos<br/>
+limpiar el refrigerador<br/>
+sacar el reciclaje<br/>
+lavar los platos<br/>
 </samp>
 
 > ¿Qué pasa si anidas instrucciones `defer` de la siguiente manera?
@@ -350,17 +350,17 @@ obtendrás el siguiente resultado:
 
 ```swift
 func flipFlop() {
-    var position = "It's pronounced /ɡɪf/"
+    var position = "Se pronuncia /ɡɪf/"
     defer { print(position) }
 
-    position = "It's pronounced /dʒɪf/"
+    position = "Se pronuncia /dʒɪf/"
     defer { print(position) }
 }
 ```
 
 <samp>
-It's pronounced /dʒɪf/ <br/>
-It's pronounced /dʒɪf/
+Se pronuncia /dʒɪf/ <br/>
+Se pronuncia /dʒɪf/
 </samp>
 
 ### Difiriendo moderadamente
