@@ -9,7 +9,7 @@ category: Swift
 excerpt: >
     Swift 2.0 introdujo dos nuevas instrucciones de control 
     buscando simplificar los programas que escribimos.
-    El primero por su naturaleza hace nuestro código más lineal,
+    El primero, por su naturaleza, hace nuestro código más lineal,
     mientras que el último hace lo opuesto, retrasando la ejecución
     de su contenido.
 revisions:
@@ -20,16 +20,16 @@ status:
     reviewed: August 1, 2018
 ---
 
-> "(Como programadores y programadoras sabios/as consciente de nuestras limitaciones) debemos hacer
-> nuestro mejor esfuerzo para ... tener correspondencia entre el programa
-> (esparcido en el espacio del texto) y el proceso
-> (esparcido en el tiempo) lo más trivial posible."
+> "Como programadores conscientes de nuestras propias limitaciones, 
+> debemos intentar que la correspondencia 
+> entre el programa (esparcido en el espacio del texto)
+> y el proceso (tiempo) sea lo más sencilla posible."
 
 > —[Edsger W. Dijkstra](https://es.wikipedia.org/wiki/Edsger_Dijkstra),
 > ["Go To Considered Harmful"](https://homepages.cwi.nl/~storm/teaching/reader/Dijkstra68.pdf)
 
 Es una lástima que su ensayo
-es aún más recordado por popularizar el "\_\_\_\_ Consider Harmful" meme
+sea aún más recordado por popularizar el "\_\_\_\_ Consider Harmful" meme
 entre los programadores y sus mal consideradas diatribas en línea.
 Porque (como usualmente) Dijkstra estaba formulando un excelente punto:
 **la estructura del código debe reflejar su comportamiento**.
@@ -37,7 +37,7 @@ Porque (como usualmente) Dijkstra estaba formulando un excelente punto:
 Swift 2.0 introdujo dos nuevas instrucciones de control
 buscando simplificar los programas que escribimos:
 `guard` y `defer`.
-Por su naturaleza el primero hace nuestro código más lineal,
+Por su naturaleza, el primero hace nuestro código más lineal,
 mientras que el último hace lo opuesto, retrasando la ejecución
 de su contenido.
 
