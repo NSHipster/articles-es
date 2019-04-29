@@ -314,7 +314,7 @@ al correr el siguiente código, se imprime el resultado mostrado abajo:
 ```swift
 func procrastinate() {
     defer { print("lavar los platos") }
-    defer { print("sacar el reciclaje") }
+    defer { print("sacar la basura") }
     defer { print("limpiar el refrigerador") }
 
     print("jugar videojuegos")
@@ -323,7 +323,7 @@ func procrastinate() {
 
 <samp>
 jugar videojuegos<br/>
-limpiar el refrigerador<br/>
+sacar la basura<br/>
 sacar el reciclaje<br/>
 lavar los platos<br/>
 </samp>
