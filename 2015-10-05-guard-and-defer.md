@@ -149,10 +149,8 @@ func readBedtimeStory() throws {
 }
 ```
 
-Para leer una historia de cuna,
-necesitamos poder encontrar el libro,
-la historia debe ser descifrable,
-y la historia no puede ser de terror
+Para leer una historia de cuna, necesitamos poder encontrar el libro, 
+la historia debe ser descifrable, y no puede ser de terror
 (_no monstruos al final de este libro, ¡por favor y gracias!_).
 
 Pero nota que tan lejos está la instrucción `throw` de la validación misma.
