@@ -40,7 +40,7 @@ Por su naturaleza, el primero hace nuestro código más lineal, mientras que el 
 ¿Cómo deberíamos abordar estas instrucciones de control?
 ¿Cómo pueden `guard` y `defer` ayudarnos a aclarar la correspondencia entre el programa y el proceso?
 
-Vamos a diferir `defer` y primero hablemos de `guard`.
+Vamos a diferir `defer` y empecemos hablando de `guard`.
 
 ---
 
@@ -133,9 +133,7 @@ func readBedtimeStory() throws {
 }
 ```
 
-Para leer una historia de cuna, necesitamos poder encontrar el libro, 
-la historia debe ser descifrable, y no puede ser de terror
-(_no monstruos al final de este libro, ¡por favor y gracias!_).
+Para leer una historia de cuna necesitamos poder encontrar el libro, debe ser descifrable y no puede ser de terror (Sin monstruos en el libro, ¡por favor y gracias!).
 
 Pero nota que tan lejos está la instrucción `throw` de la validación misma.
 Para saber qué pasa cuando no puedes encontrar `book.txt`, necesitas leer hasta el final del método.
@@ -169,9 +167,9 @@ func readBedtimeStory() throws {
 ```
 
 _¡Mucho mejor!_
-Cada caso de error es manejado inmediatamente es validado, de esta forma podemos seguir el flujo de ejecución hacia abajo por el lado izquierdo.
+Cada caso de error es manejado inmediatamente es validado. De esta forma, podemos seguir el flujo de ejecución hacia abajo.
 
-### No no vigiles doble negativos
+### Evita no vigilar dobles negativos
 
 Un hábito que debemos vigilar en lo que adoptamos este nuevo mecanismo de control, es el de utilizarlo excesivamente ---
 particularmente cuando la condición evaluada ya está negada.
@@ -199,13 +197,9 @@ if string.isEmpty {
 
 ## defer
 
-Entre `guard` y la nueva instrucción `throw` para el manejo de errores,
-Swift fomenta el estilo de retornar anticipado (favorito de NSHipster) en vez de instrucciones `if` anidadas.
-Sin embargo, retornar de manera anticipada plantea un reto distinto,
-cuando los recursos han sido inicializados (y pueden aún estar en uso), se debe limpiar antes de retornar.
+Entre `guard` y la nueva instrucción `throw` para el manejo de errores, Swift fomenta el estilo de retornar temprano (favorito de NSHipster) en vez de instrucciones `if` anidadas. Sin embargo, retornar de manera anticipada plantea un reto distinto, cuando los recursos han sido inicializados (y pueden aún estar en uso), se debe limpiar antes de retornar.
 
-La palabra clave `defer` provee una forma fácil y segura de manejar este reto,
-declarando un bloque que será ejecutado solo cuando la ejecución del alcance actual termine. 
+La palabra clave `defer` permite manejar este reto de forma fácil y segura, declarando un bloque que será ejecutado solo cuando termine la ejecución del alcance actual.
 
 Considera la siguiente función que envuelve una llamada al sistema a `gethostname(2)`
 para retornar el actual [nombre de equipo](https://es.wikipedia.org/wiki/Nombre_de_equipo) del sistema.
@@ -228,13 +222,13 @@ func currentHostName() -> String {
     return hostname
 }
 ```
-Aquí hemos asignado un espacio a `UnsafeMutablePointer<Int8>` de manera anticipada
+Aquí hemos asignado un espacio en memoria a `UnsafeMutablePointer<Int8>` de manera anticipada
 pero necesitamos recordar liberar ese espacio tanto en el fallo de la condición, como al terminar de utilizar el espacio temporal de memoria.
 
 ¿Propenso a errores? _Sí._   
 ¿Frustrantemente repetitivo? _Listo._
 
-Utilizando la instrucción `defer` podemos remover el potencial error de los/as programadores/as, y simplificar nuestro código:
+Utilizando la instrucción `defer` podemos remover el potencial error de los programadores, y simplificar nuestro código:
 
 ```swift
 func currentHostName() -> String {
@@ -258,8 +252,7 @@ Considera utilizar `defer` cuando un API requiera llamadas balanceadas,
 como `allocate(capacity:)` / `deallocate()`,
 `wait()` / `signal()`, o
 `open()` / `close()`.
-De esta forma, no solo eliminas la potencial fuente de error de el/la programador/a,
-también haces orgulloso a Dijkstra.
+De esta forma, no solo eliminas la potencial fuente de error del programador, sino que también rindes honor a Dijkstra.
 _"Goed gedaan!" Diría el, en su nativo Holandés_.
 
 ### Difiriendo frecuentemente
@@ -269,8 +262,8 @@ estas serán ejecutadas en el orden contrario ---
 como una pila.
 Este orden reverso es un detalle vital, debemos asegurarnos de que todo lo que estaba al alcance cuando un bloque diferido fue creado va a seguir estando al alcance cuando este bloque diferido se ejecute.
 
-Por ejemplo,
-al correr el siguiente código, se imprime el resultado mostrado abajo:
+Por ejemplo, 
+al ejecutar el siguiente código, se imprime el resultado mostrado abajo:
 
 ```swift
 func procrastinate() {
@@ -301,12 +294,9 @@ defer { defer { print("clean the gutter") } }
 
 ### Difiriendo juiciosamente
 
-Si una variable tiene referencia en el cuerpo de una instrucción `defer`,
-será evaluado su valor final, esto quiere decir:
-el bloque de `defer` no captura el valor actual de una variable.
+Si se referencia a una variable dentro de un bloque defer se obtiene su valor final, lo cual quiere decir que el bloque no captura el valor actual de una variable.
 
-Si corres la próxima muestra de código,
-obtendrás el siguiente resultado: 
+Si ejecutas la próxima muestra de código, obtendrás el siguiente resultado:
 
 ```swift
 func flipFlop() {
@@ -344,7 +334,7 @@ En cambio, puedes ignorar el error utilizando `try?` o simplemente mover la inst
 
 Aún lo útil que es la instrucción `defer`, debes ser consciente de cómo sus capacidades pueden llevar a
 un código confuso y difícil de rastrear.
-Debe ser tentador usar `defer` en casos donde una función necesita retornar un valor que necesita ser modificado, como esta típica implementación del operador sufijo `++`:
+Puede ser tentador usar `defer` en casos donde una función necesita retornar un valor que necesita ser modificado, como esta típica implementación del operador sufijo `++`:
 
 ```swift
 postfix func ++(inout x: Int) -> Int {
@@ -364,16 +354,15 @@ postfix func ++(inout x: Int) -> Int {
 }
 ```
 
-Muy listo, de igual forma, esta inversión en el flujo de la función
-perjudica la legibilidad.
+Muy listo, de igual forma, esta inversión en el flujo de la función perjudica la legibilidad.
 Utilizar `defer` para explícitamente alterar el flujo de un programa, en vez de limpiar recursos asignados, nos llevará a una ejecución torcida y enredada.
 
 ---
 
-"Como programadores y programadoras sabios/as conscientes de nuestra limitaciones,"
+"Como programadores conscientes de nuestras limitaciones,"
 debemos balancear el beneficio de cada funcionalidad de un lenguaje contra su costo.
 
-Una nueva instrucción como `guard` nos lleva un programa más lineal y legible;
+Una nueva instrucción como `guard` nos lleva a un programa más lineal y legible;
 aplícalo lo más ampliamente posible.
 
-Igualmente, `defer` soluciona un reto significativo, pero nos fuerza a mantener un rastreo de las declaraciones; resérvalo a su propósito mínimo para prevenir confusión y oscuridad.
+Igualmente, `defer` soluciona un reto significativo, pero nos fuerza a mantener un rastreo de las declaraciones; úsalo con cautela para evitar confusión en el código.
