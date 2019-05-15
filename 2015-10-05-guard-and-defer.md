@@ -56,7 +56,7 @@ func sayHello(numberOfTimes: Int) {
     }
 
     for _ in 1...numberOfTimes {
-        print("Hello!")
+        print("Hola!")
     }
 }
 ```
@@ -122,7 +122,7 @@ func readBedtimeStory() throws {
             if story.contains("👹") {
                 throw StoryError.tooScary
             } else {
-                print("Once upon a time... \(story)")
+                print("Érase una vez... \(story)")
             }
         } else {
             throw StoryError.illegible
@@ -162,7 +162,7 @@ func readBedtimeStory() throws {
         throw StoryError.tooScary
     }
 
-    print("Once upon a time... \(story)")
+    print("Érase una vez... \(story)")
 }
 ```
 
@@ -285,7 +285,7 @@ lavar los platos<br/>
 > ¿Qué pasa si anidas instrucciones `defer` de la siguiente manera?
 
 ```swift
-defer { defer { print("clean the gutter") } }
+defer { defer { print("limpiar la canaleta") } }
 ```
 
 > Tu primer pensamiento puede ser que empuja la instrucción al fondo de la pila.
